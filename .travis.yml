@@ -4,4 +4,11 @@ before_install:
           - sudo apt-get update -qq
 install:
           - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
-script: make CONFIG=configs/config-evo2
+script:
+          - make CONFIG=configs/config-evo2
+          - make CONFIG=configs/config-larsp
+          - make CONFIG=configs/config-petSD
+          - make CONFIG=configs/config-sw1
+          - make CONFIG=configs/config-sw2
+          - make CONFIG=configs/config-uIEC
+          - make CONFIG=configs/config-uIEC3
