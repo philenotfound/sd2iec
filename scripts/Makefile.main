@@ -90,6 +90,11 @@ ifeq ($(CONFIG_UART_DEBUG),y)
   SRC += $(CONFIG_ARCH)/uart.c
 endif
 
+ifeq ($(CONFIG_LCD_DISPLAY),y)
+  SRC += display_lcd.c lcd.c
+#  NEED_I2C := y
+endif
+
 ifeq ($(CONFIG_REMOTE_DISPLAY),y)
   SRC += display.c
   NEED_I2C := y
